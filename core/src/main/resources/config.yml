@@ -90,6 +90,15 @@ send-join-notification: false
 # Set this to false if you do not want players to be kicked when you enable maintenance (new connections will still be blocked).
 kick-online-players: true
 
+# Webhook do Discord para notificações de manutenção
+webhook:
+  enabled: true
+  url: "https://discord.com/api/webhooks/SEU_WEBHOOK"
+  messages:
+    enabled_no_timer: "🚧 O servidor entrou em manutenção!"
+    enabled_with_timer: "🚧 O servidor entrou em manutenção. Voltamos em %TIMER%!"
+    disabled: "✅ O servidor saiu do modo de manutenção!"
+
 # When fetched player does not exist then fallback to offline uuid. Only works on proxies like Velocity or BungeeCord
 fallback-to-offline-uuid: false
 

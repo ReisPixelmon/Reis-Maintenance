@@ -38,5 +38,11 @@ public final class ToggleCommand extends CommandInfo {
         }
 
         plugin.setMaintenance(maintenance);
+        // Webhook
+        if (maintenance) {
+            eu.kennytv.maintenance.core.util.WebhookUtil.send("enabled_no_timer");
+        } else {
+            eu.kennytv.maintenance.core.util.WebhookUtil.send("disabled");
+        }
     }
 }

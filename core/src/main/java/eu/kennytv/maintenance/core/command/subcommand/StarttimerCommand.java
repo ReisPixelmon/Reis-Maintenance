@@ -45,5 +45,7 @@ public final class StarttimerCommand extends CommandInfo {
 
         plugin.startMaintenanceRunnable(duration, true);
         sender.send(getMessage("starttimerStarted", "%TIME%", plugin.getRunnable().getTime()));
+        // Webhook
+        eu.kennytv.maintenance.core.util.WebhookUtil.send("enabled_with_timer", "{time}", plugin.getRunnable().getTime());
     }
 }

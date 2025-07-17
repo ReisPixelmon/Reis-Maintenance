@@ -95,6 +95,13 @@ public abstract class MaintenancePlugin implements Maintenance {
     public void disable() {
     }
 
+    public void onEnable() {
+        // Inicialização padrão
+        if (settings != null && settings.getConfig() != null) {
+            eu.kennytv.maintenance.core.util.WebhookUtil.init(settings.getConfig(), getLogger());
+        }
+    }
+
     @Override
     public void setMaintenance(final boolean maintenance) {
         settings.setMaintenance(maintenance);

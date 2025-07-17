@@ -45,5 +45,7 @@ public final class EndtimerCommand extends CommandInfo {
 
         plugin.startMaintenanceRunnable(duration, false);
         sender.send(getMessage("endtimerStarted", "%TIME%", plugin.getRunnable().getTime()));
+        // Webhook
+        eu.kennytv.maintenance.core.util.WebhookUtil.send("disabled");
     }
 }
