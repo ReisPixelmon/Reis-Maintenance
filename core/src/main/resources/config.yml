@@ -93,7 +93,7 @@ kick-online-players: true
 # Webhook do Discord para notificações de manutenção
 webhook:
   enabled: true
-  url: "https://discord.com/api/webhooks/SEU_WEBHOOK"
+  url: "https://discord.com/api/webhooks/1395266593608564847/87Wjz4ImoytxUzrPdwYLZ0izkySqrEkMhxJ4AQ48rpLxt6engwI4brk0_evuqzYWaI7Q"
   messages:
     enabled_no_timer: "🚧 O servidor entrou em manutenção!"
     enabled_with_timer: "🚧 O servidor entrou em manutenção. Voltamos em %TIMER%!"
